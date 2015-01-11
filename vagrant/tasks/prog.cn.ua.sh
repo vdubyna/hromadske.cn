@@ -20,8 +20,6 @@ echo "-> START"
 
     git clone https://github.com/vdubyna/prog.cn.ua.git .
 
-    composer install
-
     mysql -uroot prog_cn_ua < wp/prog_cn_ua.sql
 
     cp vagrant/tasks/prog.cn.ua/httpd/vhosts.conf /etc/httpd/conf.d/vhosts.conf
