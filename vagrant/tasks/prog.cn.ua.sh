@@ -25,7 +25,7 @@ echo "-> START"
     cp vagrant/tasks/prog.cn.ua/httpd/vhosts.conf /etc/httpd/conf.d/vhosts.conf
     cp -r vagrant/tasks/prog.cn.ua/httpd/vhosts.d /etc/httpd/
 
-    systemctl try-restart httpd.service
+    systemctl restart httpd
 
 echo "-> FINISH"
 
