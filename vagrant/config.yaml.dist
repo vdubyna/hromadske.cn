@@ -1,0 +1,4 @@
+vm:
+  provider:
+    digitalocean:
+      token: XXXXXXXXXXXXXXXX
