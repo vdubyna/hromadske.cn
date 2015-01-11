@@ -12,7 +12,8 @@
         "wpackagist-plugin/events-manager": "5.5.5",
         "wpackagist-plugin/wordpress-social-login": "2.2.3",
         "wpackagist-plugin/shareaholic": "7.6.0.5",
-        "wpackagist-plugin/wp-google-analytics": "1.4.1"
+        "wpackagist-plugin/wp-google-analytics": "1.4.1",
+        "vdubyna/vagrant-shell-provision": "dev-master"
     },
     "extra"       : {
         "wordpress-install-dir": "wp",
