@@ -23,7 +23,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     provider.size = '512mb'
   end
 
-  config.vm.provision "shell", path: "./vendor/vdubyna/vagrant-shell-provision/tasks/centos/7.x/epel.sh"
   config.vm.provision "shell", path: "./vendor/vdubyna/vagrant-shell-provision/tasks/centos/7.x/utils.sh"
   config.vm.provision "shell", path: "./vendor/vdubyna/vagrant-shell-provision/tasks/centos/7.x/mysql.sh"
   config.vm.provision "shell", path: "./vendor/vdubyna/vagrant-shell-provision/tasks/centos/7.x/php54.sh"
