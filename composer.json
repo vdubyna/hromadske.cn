@@ -9,7 +9,8 @@
     "require"     : {
         "johnpbloch/wordpress": "4.1",
         "wpackagist-theme/dazzling": "1.4.0",
-        "wpackagist-plugin/events-manager": "5.5.5"
+        "wpackagist-plugin/events-manager": "5.5.5",
+        "wpackagist-plugin/wordpress-social-login": "2.2.3"
     },
     "extra"       : {
         "wordpress-install-dir": "wp",
