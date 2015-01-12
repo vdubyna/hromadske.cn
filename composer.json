@@ -13,7 +13,9 @@
         "wpackagist-plugin/wordpress-social-login": "2.2.3",
         "wpackagist-plugin/shareaholic": "7.6.0.5",
         "wpackagist-plugin/wp-google-analytics": "1.4.1",
-        "vdubyna/vagrant-shell-provision": "dev-master"
+        "vdubyna/vagrant-shell-provision": "dev-master",
+        "wpackagist-plugin/facebook": "~1.5",
+        "wpackagist-theme/pinbin": "~1.4"
     },
     "extra"       : {
         "wordpress-install-dir": "wp",
