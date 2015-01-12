@@ -27,5 +27,11 @@ echo "-> START"
 
     systemctl restart httpd
 
+    dd if=/dev/zero of=/swapfile bs=1024 count=1024k
+    mkswap /swapfile
+    swapon /swapfile
+    chown root:root /swapfile
+    chmod 0600 /swapfile
+
 echo "-> FINISH"
 
