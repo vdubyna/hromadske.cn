@@ -1,12 +1,12 @@
 {
-    "type"        : "project",
+    "type": "project",
     "repositories": [
         {
             "type": "composer",
-            "url" : "http://wpackagist.org"
+            "url": "http://wpackagist.org"
         }
     ],
-    "require"     : {
+    "require": {
         "johnpbloch/wordpress": "4.1",
         "wpackagist-theme/dazzling": "1.4.0",
         "wpackagist-plugin/events-manager": "5.5.5",
@@ -14,14 +14,17 @@
         "wpackagist-plugin/shareaholic": "7.6.0.5",
         "wpackagist-plugin/wp-google-analytics": "1.4.1",
         "vdubyna/vagrant-shell-provision": "dev-master",
-        "wpackagist-plugin/facebook": "~1.5",
         "wpackagist-theme/pinbin": "~1.4"
     },
-    "extra"       : {
+    "extra": {
         "wordpress-install-dir": "wp",
         "installer-paths": {
-            "wp/wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
-            "wp/wp-content/themes/{$name}/": ["type:wordpress-theme"]
+            "wp/wp-content/plugins/{$name}/": [
+                "type:wordpress-plugin"
+            ],
+            "wp/wp-content/themes/{$name}/": [
+                "type:wordpress-theme"
+            ]
         }
     }
 }
