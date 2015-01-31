@@ -2,3 +2,6 @@ vm:
   provider:
     digitalocean:
       token: XXXXXXXXXXXXXXXX
+  user:
+    name: USERNAME
+    password: PASSWORD

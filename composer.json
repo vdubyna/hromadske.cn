@@ -14,7 +14,8 @@
         "wpackagist-plugin/shareaholic": "7.6.0.5",
         "wpackagist-plugin/wp-google-analytics": "1.4.1",
         "vdubyna/vagrant-shell-provision": "dev-master",
-        "wpackagist-theme/pinbin": "~1.4"
+        "wpackagist-theme/pinbin": "~1.4",
+        "wpackagist-plugin/facebook-auto-publish": "~1.1"
     },
     "extra": {
         "wordpress-install-dir": "wp",

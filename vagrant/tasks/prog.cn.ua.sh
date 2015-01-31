@@ -5,33 +5,30 @@
 echo "NAME: Configure prog.cn.ua application"
 
 echo "-> PREPARE"
-    # Check on exists
-    file="/etc/httpd/conf.d/vhosts.conf"
-    if [ -f "$file" ]; then
-        echo "Host already configured"
-        exit 0
+    # Check if SWAP is configured
+
+
+    if [ -d "/swapfile" ]; then
+        dd if=/dev/zero of=/swapfile bs=1024 count=1024k
+        mkswap /swapfile
+        swapon /swapfile
+        chown root:root /swapfile
+        chmod 0600 /swapfile
     fi
 
 echo "-> START"
-
-    mysql -uroot -e'CREATE DATABASE IF NOT EXISTS prog_cn_ua'
-
-    cd /var/www/html
-
-    git clone https://github.com/vdubyna/prog.cn.ua.git .
-
-    mysql -uroot prog_cn_ua < wp/prog_cn_ua.sql
-
+    cd /vagrant
     cp vagrant/tasks/prog.cn.ua/httpd/vhosts.conf /etc/httpd/conf.d/vhosts.conf
     cp -r vagrant/tasks/prog.cn.ua/httpd/vhosts.d /etc/httpd/
 
+    mysql -uroot -e'DROP DATABASE prog_cn_ua; CREATE DATABASE IF NOT EXISTS prog_cn_ua'
     systemctl restart httpd
 
-    dd if=/dev/zero of=/swapfile bs=1024 count=1024k
-    mkswap /swapfile
-    swapon /swapfile
-    chown root:root /swapfile
-    chmod 0600 /swapfile
+    cd /var/www/html/wp
+    #todo fix permissions
+    mkdir -p wp-content/uploads
+    chmod -R 777 wp-content/uploads
+    sudo -u apache wp core install --url="http://prog.cn.ua" --title="ProgCnUa" --admin_user=admin --admin_password=qwer1234 --admin_email=admin@prog.cn.ua
 
 echo "-> FINISH"
 
