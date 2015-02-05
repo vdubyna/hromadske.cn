@@ -129,6 +129,7 @@ function getCategoryPostData($post){
 /*============ Site data ============*/
 
 function getWeather(){
+    //TODO replace this with a service
 	$url = "http://tools.kgtv.com.ua/api/v1/weather.get";
 	$data = getJSON($url);
 	if(!isset($data->result)) return nil;
@@ -139,6 +140,7 @@ function getWeather(){
 }
 
 function getCurrency(){
+    //TODO replace this with a service
 	$url = "http://tools.kgtv.com.ua/api/v1/currency.get";
 	$data = getJSON($url);
 	if(!isset($data->result)) return nil;
@@ -148,10 +150,12 @@ function getCurrency(){
 }
 
 function getCurrentBroadcastVideo(){
-	$url = "http://tools.kgtv.com.ua/api/v1/broadcast.current";
-	$data = getJSON($url);
-	if(!isset($data->result)) return nil;
-	return $data->result;
+    //TODO replace this with a service
+//	$url = "http://tools.kgtv.com.ua/api/v1/broadcast.current";
+//	$data = getJSON($url);
+//	if(!isset($data->result)) return nil;
+//	return $data->result;
+    return array();
 }
 
 function broadcastStartTimeToStr($dateStr){
@@ -172,30 +176,43 @@ function getJSON($url){
 /*============ Tools api functions ============*/
 
 function toolsApiRequest($method, $params = null){
-	$url = "http://tools.kgtv.com.ua/api/v1/".$method;
-	if($params){
-		$i = 0;
-		foreach ($params as $key => $value) {
-			if($i == 0) $url .= "?".$key."=".$value;
-			else $url .= "&".$key."=".$value;
-			$i++;
-		}
-	}
-	$data = getJSON($url);
-	if(!$data) return null;
-	if(isset($data->error)) return null;
-	if(!isset($data->result)) return null;
-	return $data->result;
+//    TODO remove this completely
+
+//	$url = "http://tools.kgtv.com.ua/api/v1/".$method;
+//	if($params){
+//		$i = 0;
+//		foreach ($params as $key => $value) {
+//			if($i == 0) $url .= "?".$key."=".$value;
+//			else $url .= "&".$key."=".$value;
+//			$i++;
+//		}
+//	}
+//	$data = getJSON($url);
+//	if(!$data) return null;
+//	if(isset($data->error)) return null;
+//	if(!isset($data->result)) return null;
+//	return $data->result;
+    return array();
 }
 
 /*============ Template functions ============*/
 
 function modImgURL($src, $width = 0, $height = 0){
-	$url = "http://img.kgtv.com.ua/mod?src=".$src;
-	if(isset($width) && isset($height)) return $url."&w=".$width."&h=".$height;
-	if(isset($width) && ($width != 0)) return $url."&w=".$width;
-	if(isset($height) && ($height != 0)) return $url."&h=".$height;
-	return "";
+//    TODO replace this
+//	$url = "http://img.kgtv.com.ua/mod?src=".$src;
+//	if(isset($width) && isset($height)) return $url."&w=".$width."&h=".$height;
+//	if(isset($width) && ($width != 0)) return $url."&w=".$width;
+//	if(isset($height) && ($height != 0)) return $url."&h=".$height;
+
+
+//    $image = wp_get_image_editor( $src );
+//    if ( ! is_wp_error( $image ) ) {
+//        $image->resize( $width, $height, true );
+//        $savePath =
+//        $image->save( $height );
+//    }
+//    $modifiedSrc = base_url() . '/wp-content/posts-images/' .
+	return $src;
 }
 
 function isHaveCategory($categories, $name){
@@ -206,6 +223,7 @@ function isHaveCategory($categories, $name){
 }
 
 function defaultVideo(){
+
 	return "https://www.youtube.com/watch?v=TQY8FYMrH_E";
 }
 

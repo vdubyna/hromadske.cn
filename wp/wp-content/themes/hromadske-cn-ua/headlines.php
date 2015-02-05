@@ -20,7 +20,7 @@
 				<li>
 					<a href="<?php echo $headlinePost["url"]; ?>">
 						<span class="visual">
-							<img src="<?php echo modImgURL($headlinePost["img_url"], 230, 146); ?>">
+							<img src="<?php echo modImgURL($headlinePost["img_url"], 230, 146); ?>" width="230" height="146" />
 							<div class="hover-block"> 
 								<div class="block"> 
 									<div class="column">

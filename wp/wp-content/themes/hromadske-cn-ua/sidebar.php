@@ -20,7 +20,7 @@
 			<li>
 				<a href="<?php echo $sidebarPost["url"]; ?>" class="social-news-item">
 					<span class="visual">
-						<img src="<?php echo modImgURL($sidebarPost["img_url"], 45, 45); ?>" alt="">
+						<img src="<?php echo modImgURL($sidebarPost["img_url"], 45, 45); ?>" width="45" height="45" alt="">
 					</span>
 					<span class="content">
 						<span class="description"><?php echo $sidebarPost["title"]; ?></span>
@@ -57,7 +57,7 @@
 			<li>
 				<a href="<?php echo $sidebarPost["url"]; ?>" class="social-news-item">
 					<span class="visual">
-						<img src="<?php echo modImgURL($sidebarPost["img_url"], 45, 45); ?>" alt="">
+						<img src="<?php echo modImgURL($sidebarPost["img_url"], 45, 45); ?>" width="45" height="45" alt="">
 					</span>
 					<span class="content">
 						<span class="description"><?php echo $sidebarPost["title"]; ?></span>
@@ -79,24 +79,26 @@
 	</div>
 	<!-- /Editor's news -->
 	<!-- Facebook page -->
-	<div class="aside-block facebook-page">
-		<h3 class="main-title">Facebook</h3>
-		<div class="facebook-page-holder">
-			<div class="fb-like-box" data-href="https://www.facebook.com/kgtv.kremenchug" data-width="299" data-height="299" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="false"></div>
-		</div>
-	</div>
+<!--    TODO Facebook-->
+<!--	<div class="aside-block facebook-page">-->
+<!--		<h3 class="main-title">Facebook</h3>-->
+<!--		<div class="facebook-page-holder">-->
+<!--			<div class="fb-like-box" data-href="https://www.facebook.com/Hromadske.CN" data-width="299" data-height="299" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="false"></div>-->
+<!--		</div>-->
+<!--	</div>-->
 	<!-- /Facebook page -->
 	<!-- VK page -->
-	<div class="aside-block vk-page">
-		<h3 class="main-title">VK</h3>
-		<div class="vk-page-holder">
-			<script type="text/javascript" src="//vk.com/js/api/openapi.js?115"></script>
-			<div id="vk_groups"></div>
-			<script type="text/javascript">
-			VK.Widgets.Group("vk_groups", {mode: 0, width: "299", height: "299", color1: 'FFFFFF', color2: '666', color3: 'ee7829'}, 69310253);
-			</script>
-		</div>
-	</div>
+<!--    TODO vk group-->
+<!--	<div class="aside-block vk-page">-->
+<!--		<h3 class="main-title">VK</h3>-->
+<!--		<div class="vk-page-holder">-->
+<!--			<script type="text/javascript" src="//vk.com/js/api/openapi.js?115"></script>-->
+<!--			<div id="vk_groups"></div>-->
+<!--			<script type="text/javascript">-->
+<!--			VK.Widgets.Group("vk_groups", {mode: 0, width: "299", height: "299", color1: 'FFFFFF', color2: '666', color3: 'ee7829'}, 69310253);-->
+<!--			</script>-->
+<!--		</div>-->
+<!--	</div>-->
 	<!-- /Facebook page -->
 
 </aside>

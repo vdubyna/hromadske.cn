@@ -7,8 +7,9 @@
 		<article class="page-box">
 			<h1 class="title"><?php echo get_the_title(); ?></h1>
 			<div class="content">
-                <?php the_content(); ?>
-				<?php echo wpautop(get_the_content()); ?>
+                <?php echo wpautop($post->post_content); ?>
+<!--                TODO - Fix problem with content display-->
+<!--				--><?php //echo wpautop(get_the_content()); ?>
 			</div>
 
         	<?php if (current_user_can("edit_posts")) : ?>

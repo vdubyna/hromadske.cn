@@ -22,7 +22,7 @@
 					<li<?php if($sticker) echo ' class="sticker-'.$sticker.'"'; ?>>
 						<a href="<?php the_permalink(); ?>">
 							<span class="visual">
-								<img src="<?php echo modImgURL($categoryPost["img_url"], 120, 84); ?>" alt="<?php echo $categoryPost["title"];?>">
+								<img src="<?php echo modImgURL($categoryPost["img_url"], 120, 84); ?>" width="124" heigth="80" alt="<?php echo $categoryPost["title"];?>">
 							</span>
 							<span class="content-block">
 								<strong class="title"><?php echo $categoryPost["title"];?></strong>

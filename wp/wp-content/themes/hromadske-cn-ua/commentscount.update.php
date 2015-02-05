@@ -20,20 +20,22 @@
 	}
 
 	function toolsApiRequest($method, $params = null){
-		$url = "http://tools.kgtv.com.ua/api/v1/".$method;
-		if($params){
-			$i = 0;
-			foreach ($params as $key => $value) {
-				if($i == 0) $url .= "?".$key."=".$value;
-				else $url .= "&".$key."=".$value;
-				$i++;
-			}
-		}
-		$data = getJSON($url);
-		if(!$data) return null;
-		if(isset($data->error)) return null;
-		if(!isset($data->result)) return null;
-		return $data->result;
+//        TODO remove this completly
+//		$url = "http://tools.kgtv.com.ua/api/v1/".$method;
+//		if($params){
+//			$i = 0;
+//			foreach ($params as $key => $value) {
+//				if($i == 0) $url .= "?".$key."=".$value;
+//				else $url .= "&".$key."=".$value;
+//				$i++;
+//			}
+//		}
+//		$data = getJSON($url);
+//		if(!$data) return null;
+//		if(isset($data->error)) return null;
+//		if(!isset($data->result)) return null;
+//		return $data->result;
+        return array();
 	}
 
 	function getJSON($url){

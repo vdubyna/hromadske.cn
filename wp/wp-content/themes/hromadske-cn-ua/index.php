@@ -20,7 +20,7 @@
 					?>
 					<li class="<?php echo $liClass; ?>">
 						<a href="<?php echo $mainContentPost["url"]; ?>">
-							<img src="<?php echo modImgURL($mainContentPost["img_url"], 569, 362) ?>" alt="<?php echo $mainContentPost["title"]; ?>">
+							<img src="<?php echo modImgURL($mainContentPost["img_url"], 569, 362) ?>" width="569" height="362" alt="<?php echo $mainContentPost["title"]; ?>">
 							<span><?php echo $mainContentPost["title"]; ?></span>
 						</a>
 					</li>
@@ -49,7 +49,7 @@
 						?>
 						<li>
 							<a href="<?php the_permalink(); ?>">
-								<img src="<?php echo modImgURL($weekPost['img_url'], 254, 149) ?>" alt="">
+								<img src="<?php echo modImgURL($weekPost['img_url'], 254, 149) ?>" width="254" height="149"  alt="">
 								<div class="hover-block"> 
 									<div class="block"> 
 										<div class="column">
@@ -137,7 +137,7 @@
 			<li>
 				<a href="<?php echo $mainFeedPost["url"] ?>">
 					<span class="visual">
-						<img src="<?php echo modImgURL($mainFeedPost["img_url"], 300, 200) ?>">
+						<img src="<?php echo modImgURL($mainFeedPost["img_url"], 300, 200) ?>" width="300" height="200" />
 						<span class="mark left <?php echo $mainFeedPost["category_color"]; ?>">
 							<?php echo $mainFeedPost["category"]; ?>
 						</span>
@@ -198,7 +198,7 @@
 					<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 					<?php $photoVideoPost = getPhotoAndVideoPostData($post); ?>
 					<li><a href="<?php echo $photoVideoPost["url"]; ?>">
-						<div class="visual"><img src="<?php echo modImgURL($photoVideoPost["img_url"], 233, 130) ?>" alt=""><span class="btn-play"></span>
+						<div class="visual"><img src="<?php echo modImgURL($photoVideoPost["img_url"], 233, 130) ?>" width="233" height="130" alt=""><span class="btn-play"></span>
 						<div class="hover-block"> 
 							<div class="block"> 
 								<div class="column">

@@ -24,7 +24,7 @@
 		$media = postVideoCodeFromURL($postVideoURL);
 	}else{
 		$postImgURL = get_post_meta($postID, "post_img", true);
-		if($postImgURL) $media = '<img src="'.modImgURL($postImgURL, 630, 354).'" />';
+		if($postImgURL) $media = '<img src="'.modImgURL($postImgURL, 630, 354).'" width="630" height="354" />';
 	}
 ?>
 <header class="main-heading">
